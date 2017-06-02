@@ -1,4 +1,4 @@
-//*******************МАССИВЫ*****************************//
+//*******************ARRAY*****************************//
 
 //1
 //найти общие делители у чисел
@@ -122,7 +122,6 @@
 // }
 // returnNoun(555,arr); ///555 яблок
 
-
 //7
 //все счастливые билеты с 6 значными номерами
 //функция для преобразования числа к нужному формату
@@ -177,7 +176,6 @@
 // }
 // console.log(result);
 
-
 //8
 //перемешать массив в случайном порядке
 // var arr = [1,2,3,4,5,6,7,8,9,10];
@@ -188,7 +186,6 @@
 //     console.log(arr)
 // }
 // shuffle(arr);
-
 
 //9
 //перемещать символы строки в случайном порядке
@@ -202,7 +199,6 @@
 //     console.log(str);
 // }
 // strShuffle(str);
-
 
 //10
 //удалить дубли из массива
@@ -280,6 +276,144 @@
 // }
 // console.log(getSumArifmetic(arr));
 
+//14
+//создать новый массив с квадратами значений
+// var arr = [1,2,3,4,5,6,7,8,9,10];
+// var newArr = [];
+// arr.forEach(function(item){
+//     newArr.push(item * item)
+// });
+// console.log(newArr);
+
+//15
+//создать массив с квадратами значений через map
+// var arr = [1,2,3,4,5,6,7,8,9,10];
+// var square = arr.map(function(item){
+//     return item * item
+// });
+// console.log(square);
+
+//16
+//проверить массив на то что все элементы больше 0
+//что в нем есть отрицательные числа
+// var arr = [1,2,3,4,5,6,7,8,9,10,-10,-20];
+// function isPositive(number){
+//     return number > 0
+// }
+// console.log(arr.every(isPositive)); //false
+// console.log(arr.some(isPositive)); //true
+
+//17
+//оставить в массиве только отрицательные числа
+// var arr = [1,2,3,4,-2,-3,33,-13];
+// for(var i = 0; i < arr.length; i++){
+//     if(arr[i] > 0){
+//         arr.splice(i,1);
+//         i--
+//     }
+// }
+// console.log(arr);
+
+//18
+//оставить только четные числа
+// var arr = [1,2,3,4,5,6,7,8,9,10,12,13,14,16,17,18];
+// for(var i = 0; i < arr.length; i++){
+//     if(arr[i] % 2 !== 0){
+//         arr.splice(i,1);
+//         i--
+//     }
+// }
+// console.log(arr);
+
+//19
+//Оставить в массиве строки которые больше 5 символов
+// var arr = ['lorem', 'Kirill', 'yes', 'no', 'kilimadjara'];
+// var newArr = arr.filter(function(item){
+//     return item.length > 5;
+// })
+// console.log(newArr);
+
+//20
+//оставить только подмасивы
+// var arr = [1,[1,2],3,[3,4]];
+// for(var i = 0 ; i < arr.length; i++){
+//     if((typeof arr[i]) !== 'object'){
+//         arr.splice(i,1);
+//         i--
+//     }
+// }
+// console.log(arr);
+
+//21
+//подсчитать количество отрицательных символов в массиве
+// var arr = [1,-1,2,-3,3,3,4,5,6,-3,-4,-6];
+// var counter = 0;
+// for(var i = 0; i < arr.length; i++){
+//     if(arr[i] < 0){
+//         counter++
+//     }
+// }
+// console.log(counter);
+
+//22
+//найти суммы чисел массива через REDUCE;
+// var arr = [1,2,3,4,5,6,7,8,9,10];
+// var result = arr.reduce(function(sum, current){
+//     return sum + current
+// },0);
+// console.log(result);
+
+//23
+//найти сумму элементов массива до 0;
+// var arr = [1,2,0,1,2,3];
+// var result = 0;
+// for(var i = 0 ; i < arr.length; i++){
+//     if(arr[i] == 0) break;
+//     result += arr[i]
+// }
+// console.log(result);
+
+//24
+//найти сумму элементов массива после 0;
+// var arr = [1,2,0,1,2,3];
+// arr.reverse();
+// var result = 0;
+// for(var i = 0 ; i < arr.length; i++){
+//     if(arr[i] == 0) break;
+//     result += arr[i]
+// }
+// console.log(result);
+
+//25
+//узнать сколько надо сложить с начала массива чисел чтобы получилось больше 10
+// var arr = [1,2,3,4,5,6,7,8,9,10];
+// var counter = 0;
+// var result = 0;
+// for(var i = 0; i < arr.length; i++){
+//     counter++;
+//     if(result > 10){
+//         console.log(counter);
+//         break;
+//     }
+//     result += arr[i];
+//     console.log(result);
+// }
+
+//26
+//оставить положительные числа и затем извлечь корень из них
+// var arr = [1,2,3,5,-6,-22,-223,11,43445,33,-22];
+// var newArr = [];
+// for(var i = 0 ; i < arr.length; i++){
+//     if(arr[i] < 0){
+//         arr.splice(i,1);
+//         i--;
+//     }
+//     else{
+//         newArr.push(Math.sqrt(arr[i]))
+//     }
+// }
+// console.log(newArr);
+
 
 //******************************************DOM**********************************
 //1
@@ -289,7 +423,6 @@
 // button.addEventListener('click',function(){
 //     span.innerHTML = '!!!';
 // });
-
 
 //2
 //менять span на b не изменяя текста
@@ -303,7 +436,6 @@
 //     document.body.appendChild(b);
 // })
 
-
 //3
 //заменить текс обзацев на index в соответствии с вызовом
 // var button = document.querySelector('button');
@@ -315,7 +447,6 @@
 //     }
 // });
 
-
 //4
 //вывести значения input
 // var button = document.querySelector('button');
@@ -326,7 +457,6 @@
 //     input.value = '';
 // });
 
-
 //5
 //содержимое input возвести в квадрат
 // var button = document.querySelector('button');
@@ -335,7 +465,6 @@
 //    var value = +input.value;
 //    result.innerHTML = value * value;
 // });
-
 
 //6
 //поменяться значениями в input
@@ -376,4 +505,177 @@
 //     input.disabled = false;
 // })
 
+//10
+//добавить класс и удалить класс
+// var div = document.getElementById('test');
+// div.classList.add('www', 'eee');
+// console.log(div.classList);
+// div.classList.remove('www');
+// console.log(div.classList);
 
+
+//11
+//проверка наличия класса
+// var div = document.querySelector('div');
+// for(var i = 0; i < div.classList.length; i++){
+//     if(div.classList[i] == 'test'){
+//         console.log('yes');
+//     }
+//     else{
+//         console.log('no')
+//     }
+// }
+
+//12
+//проверить класс если нету добавить, если нет удалить
+// var div = document.getElementById('result');
+// for(var i = 0; i < div.classList.length; i++){
+//     if(div.classList[i] == 'test1'){
+//         div.classList.remove('test1')
+//         i--
+//     }
+//     else{
+//         div.classList.add('test1')
+//     }
+// }
+// console.log(div.classList);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//**************************FUNCTION************************//
+
+//**************************Interval and Timer****************//
+
+//1
+//запустить счетчик по клику на клавишу
+// var button = document.querySelector('button');
+// var result = document.getElementById('result');
+// var counter = 0;
+// function go(){
+//     setInterval(function(){
+//        result.innerHTML = counter++
+//     }, 1000)
+// }
+// button.addEventListener('click', go);
+
+//2
+//запутить и остановить счетчик
+// var runBtn = document.getElementById('run');
+// var stopBtn  = document.getElementById('stop');
+// var result = document.getElementById('result');
+// var counter = 0;
+//
+// function go(){
+//     run.disabled = true;
+//     stopBtn.disabled = false;
+//     window.timeId = setInterval(function(){
+//         result.innerHTML = counter++
+//     },1000)
+// }
+// function stop(){
+//     runBtn.disabled = false;
+//     stopBtn.disabled = true;
+//     window.clearInterval(window.timeId);
+// }
+// runBtn.addEventListener('click',go);
+// stopBtn.addEventListener('click',stop);
+
+// 3
+// сделать часы
+// var result = document.getElementById('result');
+// setInterval(function(){
+//     var now = new Date();
+//     var formDate = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+//     result.innerHTML = formDate
+// }, 1000);
+
+//4
+//таймер обратного отчета
+// var value = 10;
+// var result = document.getElementById('result');
+// var button = document.querySelector('button');
+// button.addEventListener('click',secondMetr);
+// function secondMetr(){
+//    function interval(){
+//        if(value == 0){
+//             clearInterval(intervalId)
+//             button.remove();
+//             var newP = document.createElement('p');
+//             newP.innerHTML = "end";
+//             document.body.appendChild(newP)
+//        }
+//        result.innerHTML = value;
+//        value--;
+//    }
+//    var intervalId = setInterval(interval, 300);
+// }
+
+//5
+//слидер
+// var img = document.querySelector('img');
+// var z = 0;
+// function func(){
+//     if( z == undefined || z == 3){
+//         z = 0
+//     }
+//     z = z + 1;
+//     img.src = z + '.png'
+// }
+// var interval = setInterval(func,1000);
+
+//6
+//карусель c остановкой
+// var imgs = document.querySelectorAll('img');
+// var button = document.querySelector('button');
+// var stop = document.getElementById('stop')
+// imgs[0].src = '1.png';
+// imgs[1].src = '2.png';
+// imgs[2].src = '3.png';
+// button.addEventListener('click', function(){
+//     function func(){
+//         var tmp = imgs[0].src;
+//         imgs[0].src = imgs[1].src;
+//         imgs[1].src = imgs[2].src;
+//         imgs[2].src = tmp
+//     }
+//     window.interval = window.setInterval(func, 2000);
+// });
+// stop.addEventListener('click', function(){
+//     window.clearInterval(window.interval);
+// });
+
+//7
+// таймер до полуночи
+// function timer(time){
+//     var hours = document.getElementById('hours');
+//     var minuts = document.getElementById('minuts');
+//     var seconds = document.getElementById('seconds');
+//     var now = new Date();
+//     var midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1, 0, 0, 0);
+//     var diff = Math.floor((midnight - now)/1000);
+//     var houseRemain = Math.floor(diff/(60*60));
+//     var minutsReamin = Math.floor((diff-houseRemain*60*60)/60);
+//     var secondsRemain = Math.floor(diff%60);
+//     hours.innerHTML = addZero(houseRemain);
+//     minuts.innerHTML = addZero(minutsReamin);
+//     seconds.innerHTML = addZero(secondsRemain);
+//
+// }
+// //добавить нули
+// function addZero(num){
+//     if(num <=9) return '0'+num;
+//     else return num;
+// }
+// var interval = setInterval(timer, 1000);
