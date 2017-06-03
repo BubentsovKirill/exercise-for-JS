@@ -149,7 +149,7 @@
 // цикл для сверки значений
 // var number = 0;
 // var result = [];
-// while(number <= 999999){
+// while(number > 999999){
 //     number++;
 //     var arr = getZero(number).slice('');
 //     var numberLeft = [];
@@ -540,14 +540,254 @@
 // }
 // console.log(div.classList);
 
+//13
+//вывести все классы и узнать их количество;
+// var div = document.querySelector('div');
+// var counter = 0
+// for(var i = 0; i < div.classList.length; i++){
+//     counter++
+//     console.log(div.classList[i]);
+// }
+//
+// console.log(counter);
 
+//14
+//добавить слили к элементу через cssText
+// var div = document.querySelector('div');
+// div.style.cssText = 'background: red; height: 30px';
 
+//15
+//по клику на тег вывести его название
+// var div = document.querySelector('div');
+// div.addEventListener('click', function(){
+//     console.log(div.tagName)
+// });
 
+//16
+//по клику вывести названия тега в нижнем регистре
+// var div = document.querySelector('div');
+// div.addEventListener('click', function(){
+//     console.log(div.tagName.toLowerCase());
+// });
 
+//17
+//добавить название тега в нижнем регистре
+// var elems = document.querySelectorAll('.www');
+// console.log(elems);
+// for(var i = 0; i < elems.length; i++){
+//     var span = document.createElement('span');
+//     span.innerHTML = elems[i].tagName.toLowerCase();
+//     elems[i].appendChild(span);
+// }
 
+//18
+//вставить li в конец ol;
+// var ol = document.querySelector('ol');
+// var li = document.createElement('li');
+// li.innerHTML = 'test3';
+// ol.appendChild(li);
 
+// 19
+// встать данные массива в список
+// var arr = [1,2,3,4,5,6,7,8,9,0];
+// var list = document.querySelector('ul');
+// for(var i = 0; i < arr.length; i++){
+//     var li = document.createElement('li');
+//     li.innerHTML = arr[i];
+//     list.appendChild(li);
+// }
 
+// 20
+// создать div с p, данные из массива
+// var arr = [1,2,3,4,5,6,7,8,9,0];
+// var div = document.createElement('div');
+// var body = document.querySelector('body');
+// body.appendChild(div);
+// for(var i = 0 ; i < arr.length; i++){
+//     var p = document.createElement('p');
+//     p.innerHTML = arr[i];
+//     div.appendChild(p)
+// }
+//
+// 21
+// вставить перед элементом другой элемент
+// var div = document.querySelector('div');
+// var p = document.querySelector('p');
+// var newP = document.createElement('p');
+// newP.innerHTML = 'new P';
+// div.insertBefore(newP,p);
 
+//22
+//вставить новый элемент перед p и повесить на него событие;
+// var div = document.querySelector('div');
+// var p = document.querySelector('p');
+// var newP = document.createElement('p');
+// newP.innerHTML = 'new P';
+// div.insertBefore(newP,p);
+// newP.addEventListener('click', function(){
+//     newP.style.background = 'red';
+// });
+
+//23
+//найти первого потомка и покрасить его в какой нить цвет
+// var ul = document.querySelector('ul');
+// var children = ul.children;
+// for(var i = 0; i < children.length; i++){
+//     if(i == 0){
+//         children[i].style.color = 'red';
+//     }
+// }
+
+//24
+//найти последнего потомка и покрасить его в какой нить цвет
+// var ul = document.querySelector('ul');
+// ul.lastElementChild.style.color = 'red';
+
+//25
+//найти всех потомком и добавить им текст в конце
+// var list = document.querySelector('ul');
+// var children = list.children;
+// for(var i = 0 ; i < children.length; i++){
+//     var span = document.createElement('span');
+//     span.innerHTML = ' !!!';
+//     children[i].appendChild(span);
+// }
+
+//26
+//найти соседа сверху и добавить ему текс
+// var elem = document.querySelectorAll('li')[1];
+// var prevElem = elem.previousElementSibling;
+// prevElem.style.color = 'red';
+
+//27
+//найти соседа снизу и добавить ему текст
+// var elem = document.querySelectorAll('li')[1];
+// var nextElem = elem.nextElementSibling;
+// nextElem.style.color = 'red';
+
+//28
+//найти соседа снизу и его соседа снизу
+// var elem = document.querySelectorAll('li')[0];
+// var therdElem = elem.nextElementSibling.nextElementSibling;
+// therdElem.style.color = 'red';
+
+//29
+//найти родителя и покрасить его в какой нить цвет
+// var p = document.querySelector('p');
+// var parent = p.parentElement;
+// parent.style.background = 'red';
+
+//30
+//найти родителя, найти потомком родителя, изменить цвет текста
+// var elem = document.querySelectorAll('li')[0];
+// var parent = elem.parentElement;
+// var children = parent.children;
+// for(var i = 0; i < children.length; i++){
+//     children[i].style.color = 'red';
+// }
+
+//31
+//по нажатию на кнопку удалить его последнего потомка
+// var list = document.querySelector('ul');
+// var lastChild = list.lastElementChild;
+// var button = document.querySelector('button');
+// button.addEventListener('click',function(){
+//     lastChild.remove()
+// });
+
+//32
+//клонировать елмент и вставить его в конец блока
+// var parent  =  document.getElementById('parent');
+// var elem = document.getElementsByClassName('elem')[0];
+// var clone = elem.cloneNode(true);
+// parent.appendChild(clone);
+
+//33
+//найти всех родителей;
+// var elem = document.querySelector('li');
+// console.log(elem);
+// var parent = elem.parentNode.parentNode.parentNode.parentNode;
+// console.log(parent);
+
+//34
+//вывести толщину границы
+// var div = document.querySelector('div');
+// console.log(div.clientTop);
+
+//35
+//вывести ширину и толщину елемента
+// var div = document.querySelector('div');
+// console.log(div.offsetWidth);
+// console.log(div.offsetHeight);
+
+//36
+//размер элента без границы но с падингом
+// var div = document.querySelector('div');
+// console.log(div.clientWidth);
+// console.log(div.clientHeight);
+
+//37
+//получить высоту и ширину элемента без учета границы и отступов
+//getComputedStyle - получим обьект стилей элемента
+// var div = document.querySelector('div');
+// var style = getComputedStyle(div);
+// console.log(style.width);
+// console.log(style.height);
+
+//38
+//узнать на сколько был прокручен body
+// var button = document.querySelector('button');
+// var body = document.querySelector('body');
+// button.addEventListener('click', function(){
+//     console.log(body.scrollTop);
+// });
+
+//39
+//узнать на сколько элемент прокручен ввлево
+// var body = document.querySelector('body');
+// var button  = document.querySelector('button');
+// button.addEventListener('click', function(){
+//    console.log(body.scrollLeft);
+// });
+
+//40
+//по нажатию прокрутить страницу на заданную высоту или в самый конец
+// var body = document.querySelector('body');
+// var button = document.querySelector('button');
+// button.addEventListener('click', function(){
+//     body.scrollTop = body.scrollHeight;
+// });
+
+//41
+//по нажатию на кнопку прокрутить страницу на определенное расстояние
+// var body = document.querySelector('body');
+// body.style.height = '2000px';
+// var button = document.querySelector('button');
+// button.addEventListener('click', function(){
+//    body.scrollTop = body.scrollTop + 400
+// });
+
+//42
+//прокрутить до определенного элемента чтобы он был в top страницы
+// document.querySelector('body').style.height = '3000px';
+// var p = document.querySelector('p');
+// var button = document.querySelector('button');
+// button.addEventListener('click', function(){
+//    p.scrollIntoView(top);
+// });
+
+//43 ??????????????
+// по нажатию на кнопку проверить прокручена страница до самого низа, если да прокрутить на 100px от top
+// var body = document.querySelector('body');
+// var button = document.querySelector('button');
+// body.style.height = '2000px';
+// console.log(body.style.height);
+// console.log(body.scrollTop);
+// button.addEventListener('click', function(){
+//     if(body.scrollHeight == body.height){
+//         body.scrollTop = 100;
+//     }
+// });
 
 
 
