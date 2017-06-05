@@ -919,3 +919,62 @@
 //     else return num;
 // }
 // var interval = setInterval(timer, 1000);
+
+
+//практические задачи;
+//калькулятрор
+//для сложения чисел ввиде строк используем eval
+// var buttons  = document.getElementsByClassName('button');
+// var display = document.querySelector('input');
+// var str = '';
+// for(var i = 0; i < buttons.length; i++){
+//     addEvent(buttons[i])
+// }
+// function addEvent(button){
+//     button.addEventListener('click', function(){
+//         var type = button.getAttribute('data-type');
+//         if(type === '='){
+//             str = eval(str);
+//             display.value = str;
+//             return
+//         }
+//         else if( type === 'c'){
+//             str = ''
+//         }
+//         else{
+//             str += type
+//         }
+//         display.value = str;
+//     })
+// }
+
+//***************************************ES6 Class**************************************//
+
+// class Task{
+//     constructor(title = Task.getDefaultTitle()){
+//         this.title = title;
+//         this._done = false;
+//         Task.count +=1;
+//     }
+//
+//     complete(){
+//         this._done = true;
+//     }
+//     get done(){
+//         return this._done === true ? 'выполнено' : 'невыполнено';
+//     }
+//     //static method
+//     static getDefaultTitle(){
+//         return 'задача'
+//     }
+// }
+//
+// //статическое свойтво для класса
+// Task.count = 0;
+//
+// let task = new Task('clear room');
+// task.complete();
+// console.log(task.done);
+
+
+//
